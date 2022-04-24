@@ -54,7 +54,7 @@ class CalculatorTest {
         vehicle.start()
         var result = vehicle.setSpeed(300)
         assertEquals(vehicle.getSpeed(), 300)
-
+12
     }
 
     fun getSut():Helicoptor {
