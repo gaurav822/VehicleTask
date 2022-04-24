@@ -10,25 +10,25 @@ class TyreTest{
 
     @Test
     fun whenTyreComponentsIsValid(){
-        val durability= 100
-        val diameter = 0.5
-        val thickness = 2.0
-        val type = "tubeless"
-        val speedRating = 'H'
-        val result = Tyre(durability = durability, diameter = diameter, thickNess = thickness, type = type, speedRating = speedRating)
-            .validateTyre()
+        val tyre = Tyre()
+        tyre.durability= 100
+        tyre.diameter = 0.5
+        tyre.thickNess = 2.0
+        tyre.type = "tubeless"
+        tyre.speedRating = Constants.speedRating.keys.elementAt(0)
+        val result = tyre.validateTyre()
         assertEquals(result,true)
     }
 
     @Test
     fun whenTyreComponentsIsInValid(){
-        val durability= 0
-        val diameter = 0.5
-        val thickness = 2.0
-        val type = "tubeless"
-        val speedRating = 'H'
-        val result = Tyre(durability = durability, diameter = diameter, thickNess = thickness, type = type, speedRating = speedRating)
-            .validateTyre()
+        val tyre = Tyre()
+        //tyre.durability= 100
+        //tyre.diameter = 0.5
+        //tyre.thickNess = 2.0
+        //tyre.type = "tubeless"
+        //tyre.speedRating = 'H'
+        val result = tyre.validateTyre()
         assertEquals(result,false)
     }
 

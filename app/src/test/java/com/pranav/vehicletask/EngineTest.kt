@@ -11,21 +11,23 @@ class EngineTest{
 
     @Test
     fun whenEngineComponentIsValid(){
-        val type = "petrol"
-        val fuelCapacity = 25
-        val power = 200
-        val mileage = 40
-        val result = Engine(type, fuelCapacity, power, mileage).validateEngine()
+        var engine =  Engine()
+        engine.type = "petrol"
+        engine.fuelCapacity = 25
+        engine.power = 200
+        //engine.mileage = 40
+        var result = engine.validateEngine()
         assertEquals(result,true)
     }
 
     @Test
     fun whenEngineComponentIsInvalid(){
-        val type = "petrol"
-        val fuelCapacity = 25
-        val power = 100
-        val mileage = 40
-        val result = Engine(type, fuelCapacity, power, mileage).validateEngine()
+        var engine =  Engine()
+        engine.type = "petrol"
+        engine.fuelCapacity = 25
+        engine.power = 200
+        //engine.mileage = 40
+        var result = engine.validateEngine()
         assertEquals(result,false)
     }
 }
